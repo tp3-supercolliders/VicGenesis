@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="regionalDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'regionalDatabase.dbo.Victoria' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Victoria">
+          <Property Name="COMM_CODE" Type="varchar" MaxLength="100" />
+          <Property Name="Community_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Community_Type" Type="varchar" MaxLength="100" />
+          <Property Name="DHS_Region" Type="varchar" MaxLength="100" />
+          <Property Name="Map_Reference" Type="varchar" MaxLength="100" />
+          <Property Name="Area_km_sq" Type="float" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="Road_distance_to_GPO_km" Type="float" />
+          <Property Name="Local_Government_Area" Type="varchar" MaxLength="100" />
+          <Property Name="Population_density" Type="float" />
+          <Property Name="Primary_Care_Partnership" Type="varchar" MaxLength="100" />
+          <Property Name="Number_of_localities" Type="float" />
+          <Property Name="ABS_Remoteness_Area" Type="varchar" MaxLength="100" />
+          <Property Name="Population_Difference" Type="varchar" MaxLength="100" />
+          <Property Name="Funded_Activity_Types" Type="float" />
+          <Property Name="Funded_Services" Type="float" />
+          <Property Name="HACC_Services" Type="float" />
+          <Property Name="Child_Protection_Services" Type="float" />
+          <Property Name="Community_Health_Services" Type="float" />
+          <Property Name="Homelessness" Type="float" />
+          <Property Name="Disability_Services" Type="float" />
+          <Property Name="Mental_Health_Services" Type="float" />
+          <Property Name="Human_Health_Services_Sites" Type="float" />
+          <Property Name="Human_Health_Services_Types" Type="float" />
+          <Property Name="Dental_Sites" Type="float" />
+          <Property Name="General_Practice_Sites" Type="float" />
+          <Property Name="Pharmacy_Sites" Type="float" />
+          <Property Name="Allied_Health_Sites" Type="float" />
+          <Property Name="Complementary_Health_Sites" Type="float" />
+          <Property Name="Child_Care_Sites" Type="float" />
+          <Property Name="Residential_Aged_Care_Facilities" Type="float" />
+          <Property Name="Licensed_Aged_Care_Places" Type="float" />
+          <Property Name="Primary_Schools" Type="float" />
+          <Property Name="Secondary_School" Type="float" />
+          <Property Name="P12_schools" Type="float" />
+          <Property Name="Other_Schools" Type="float" />
+          <Property Name="Nearest_Health_Service" Type="varchar" MaxLength="100" />
+          <Property Name="Distance_to_Nearest_Health_Service" Type="float" />
+          <Property Name="Residential" Type="varchar" MaxLength="100" />
+          <Property Name="Business" Type="varchar" MaxLength="100" />
+          <Property Name="Industrial" Type="varchar" MaxLength="100" />
+          <Property Name="Rural" Type="varchar" MaxLength="100" />
+          <Property Name="Other" Type="varchar" MaxLength="100" />
+          <Property Name="Number_Of_Households" Type="float" />
+          <Property Name="Persons_Per_Household" Type="float" />
+          <Property Name="Population_In_nonprivate_Dwellings" Type="varchar" MaxLength="100" />
+          <Property Name="Public_Rental_Dwellings" Type="varchar" MaxLength="100" />
+          <Property Name="Aboriginal_Or_Torres_Strait_Islander" Type="varchar" MaxLength="100" />
+          <Property Name="Not_Completed_Year_12" Type="varchar" MaxLength="100" />
+          <Property Name="Unemployed_Persons" Type="varchar" MaxLength="100" />
+          <Property Name="Household_Income_Less_Than_650" Type="varchar" MaxLength="100" />
+          <Property Name="Individual_Income_Less_Than_400" Type="varchar" MaxLength="100" />
+          <Property Name="Household_Without_Motor_Vehicle" Type="varchar" MaxLength="100" />
+          <Property Name="Household_With_Internet" Type="varchar" MaxLength="100" />
+          <Property Name="One_Parent_Headed_Families" Type="varchar" MaxLength="100" />
+          <Property Name="Persons_aged_75_Above_Living_Alone" Type="varchar" MaxLength="100" />
+          <Property Name="Need_Assistance_With_Core_Activities" Type="varchar" MaxLength="100" />
+          <Property Name="Born_Overseas" Type="varchar" MaxLength="100" />
+          <Property Name="Non_Engisdh_Speaker_At_Home" Type="varchar" MaxLength="100" />
+          <Property Name="Poor_English_Proficiency" Type="varchar" MaxLength="100" />
+          <Property Name="Main_Cultural_group_1_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_1_Percentage" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_2_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_2_Percentage" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_3_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_3_Percentage" Type="varchar" MaxLength="100" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'regionalDatabase.sys.database_firewall_rules' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="database_firewall_rules">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="start_ip_address" />
+            <PropertyRef Name="end_ip_address" />
+            <PropertyRef Name="create_date" />
+            <PropertyRef Name="modify_date" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="start_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="end_ip_address" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="create_date" Type="datetime" Nullable="false" />
+          <Property Name="modify_date" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="regionalDatabaseModelStoreContainer">
+          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" store:Type="Views" store:Schema="sys">
+            <DefiningQuery>SELECT 
+    [database_firewall_rules].[id] AS [id], 
+    [database_firewall_rules].[name] AS [name], 
+    [database_firewall_rules].[start_ip_address] AS [start_ip_address], 
+    [database_firewall_rules].[end_ip_address] AS [end_ip_address], 
+    [database_firewall_rules].[create_date] AS [create_date], 
+    [database_firewall_rules].[modify_date] AS [modify_date]
+    FROM [sys].[database_firewall_rules] AS [database_firewall_rules]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="regionalDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="database_firewall_rules">
+          <Key>
+            <PropertyRef Name="id" />
+            <PropertyRef Name="name" />
+            <PropertyRef Name="start_ip_address" />
+            <PropertyRef Name="end_ip_address" />
+            <PropertyRef Name="create_date" />
+            <PropertyRef Name="modify_date" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="start_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="end_ip_address" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="create_date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modify_date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="regionalDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="database_firewall_rules" EntityType="Self.database_firewall_rules" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="regionalDatabaseModelStoreContainer" CdmEntityContainer="regionalDatabaseEntities">
+          <EntitySetMapping Name="database_firewall_rules">
+            <EntityTypeMapping TypeName="regionalDatabaseModel.database_firewall_rules">
+              <MappingFragment StoreEntitySet="database_firewall_rules">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="start_ip_address" ColumnName="start_ip_address" />
+                <ScalarProperty Name="end_ip_address" ColumnName="end_ip_address" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

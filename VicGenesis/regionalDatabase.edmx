@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="regionalDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Victoria">
+          <Key>
+            <PropertyRef Name="COMM_CODE" />
+          </Key>
+          <Property Name="COMM_CODE" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Community_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Community_Type" Type="varchar" MaxLength="100" />
+          <Property Name="DHS_Region" Type="varchar" MaxLength="100" />
+          <Property Name="Map_Reference" Type="varchar" MaxLength="100" />
+          <Property Name="Area_km_sq" Type="float" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="Road_distance_to_GPO_km" Type="float" />
+          <Property Name="Local_Government_Area" Type="varchar" MaxLength="100" />
+          <Property Name="Population_density" Type="float" />
+          <Property Name="Primary_Care_Partnership" Type="varchar" MaxLength="100" />
+          <Property Name="Number_of_localities" Type="float" />
+          <Property Name="ABS_Remoteness_Area" Type="varchar" MaxLength="100" />
+          <Property Name="Population_Difference" Type="varchar" MaxLength="100" />
+          <Property Name="Funded_Activity_Types" Type="float" />
+          <Property Name="Funded_Services" Type="float" />
+          <Property Name="HACC_Services" Type="float" />
+          <Property Name="Child_Protection_Services" Type="float" />
+          <Property Name="Community_Health_Services" Type="float" />
+          <Property Name="Homelessness" Type="float" />
+          <Property Name="Disability_Services" Type="float" />
+          <Property Name="Mental_Health_Services" Type="float" />
+          <Property Name="Human_Health_Services_Sites" Type="float" />
+          <Property Name="Human_Health_Services_Types" Type="float" />
+          <Property Name="Dental_Sites" Type="float" />
+          <Property Name="General_Practice_Sites" Type="float" />
+          <Property Name="Pharmacy_Sites" Type="float" />
+          <Property Name="Allied_Health_Sites" Type="float" />
+          <Property Name="Complementary_Health_Sites" Type="float" />
+          <Property Name="Child_Care_Sites" Type="float" />
+          <Property Name="Residential_Aged_Care_Facilities" Type="float" />
+          <Property Name="Licensed_Aged_Care_Places" Type="float" />
+          <Property Name="Primary_Schools" Type="float" />
+          <Property Name="Secondary_School" Type="float" />
+          <Property Name="P12_schools" Type="float" />
+          <Property Name="Other_Schools" Type="float" />
+          <Property Name="Nearest_Health_Service" Type="varchar" MaxLength="100" />
+          <Property Name="Distance_to_Nearest_Health_Service" Type="float" />
+          <Property Name="Residential" Type="varchar" MaxLength="100" />
+          <Property Name="Business" Type="varchar" MaxLength="100" />
+          <Property Name="Industrial" Type="varchar" MaxLength="100" />
+          <Property Name="Rural" Type="varchar" MaxLength="100" />
+          <Property Name="Other" Type="varchar" MaxLength="100" />
+          <Property Name="Number_Of_Households" Type="float" />
+          <Property Name="Persons_Per_Household" Type="float" />
+          <Property Name="Population_In_nonprivate_Dwellings" Type="varchar" MaxLength="100" />
+          <Property Name="Public_Rental_Dwellings" Type="varchar" MaxLength="100" />
+          <Property Name="Aboriginal_Or_Torres_Strait_Islander" Type="varchar" MaxLength="100" />
+          <Property Name="Not_Completed_Year_12" Type="varchar" MaxLength="100" />
+          <Property Name="Unemployed_Persons" Type="varchar" MaxLength="100" />
+          <Property Name="Household_Income_Less_Than_650" Type="varchar" MaxLength="100" />
+          <Property Name="Individual_Income_Less_Than_400" Type="varchar" MaxLength="100" />
+          <Property Name="Household_Without_Motor_Vehicle" Type="varchar" MaxLength="100" />
+          <Property Name="Household_With_Internet" Type="varchar" MaxLength="100" />
+          <Property Name="One_Parent_Headed_Families" Type="varchar" MaxLength="100" />
+          <Property Name="Persons_aged_75_Above_Living_Alone" Type="varchar" MaxLength="100" />
+          <Property Name="Need_Assistance_With_Core_Activities" Type="varchar" MaxLength="100" />
+          <Property Name="Born_Overseas" Type="varchar" MaxLength="100" />
+          <Property Name="Non_Engisdh_Speaker_At_Home" Type="varchar" MaxLength="100" />
+          <Property Name="Poor_English_Proficiency" Type="varchar" MaxLength="100" />
+          <Property Name="Main_Cultural_group_1_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_1_Percentage" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_2_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_2_Percentage" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_3_Name" Type="varchar" MaxLength="100" />
+          <Property Name="Main_cultural_group_3_Percentage" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="regionalDatabaseModelStoreContainer">
+          <EntitySet Name="Victoria" EntityType="Self.Victoria" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="regionalDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Victoria">
+          <Key>
+            <PropertyRef Name="COMM_CODE" />
+          </Key>
+          <Property Name="COMM_CODE" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Community_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Community_Type" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DHS_Region" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Map_Reference" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Area_km_sq" Type="Double" />
+          <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Road_distance_to_GPO_km" Type="Double" />
+          <Property Name="Local_Government_Area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Population_density" Type="Double" />
+          <Property Name="Primary_Care_Partnership" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Number_of_localities" Type="Double" />
+          <Property Name="ABS_Remoteness_Area" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Population_Difference" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Funded_Activity_Types" Type="Double" />
+          <Property Name="Funded_Services" Type="Double" />
+          <Property Name="HACC_Services" Type="Double" />
+          <Property Name="Child_Protection_Services" Type="Double" />
+          <Property Name="Community_Health_Services" Type="Double" />
+          <Property Name="Homelessness" Type="Double" />
+          <Property Name="Disability_Services" Type="Double" />
+          <Property Name="Mental_Health_Services" Type="Double" />
+          <Property Name="Human_Health_Services_Sites" Type="Double" />
+          <Property Name="Human_Health_Services_Types" Type="Double" />
+          <Property Name="Dental_Sites" Type="Double" />
+          <Property Name="General_Practice_Sites" Type="Double" />
+          <Property Name="Pharmacy_Sites" Type="Double" />
+          <Property Name="Allied_Health_Sites" Type="Double" />
+          <Property Name="Complementary_Health_Sites" Type="Double" />
+          <Property Name="Child_Care_Sites" Type="Double" />
+          <Property Name="Residential_Aged_Care_Facilities" Type="Double" />
+          <Property Name="Licensed_Aged_Care_Places" Type="Double" />
+          <Property Name="Primary_Schools" Type="Double" />
+          <Property Name="Secondary_School" Type="Double" />
+          <Property Name="P12_schools" Type="Double" />
+          <Property Name="Other_Schools" Type="Double" />
+          <Property Name="Nearest_Health_Service" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Distance_to_Nearest_Health_Service" Type="Double" />
+          <Property Name="Residential" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Business" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Industrial" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Rural" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Other" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Number_Of_Households" Type="Double" />
+          <Property Name="Persons_Per_Household" Type="Double" />
+          <Property Name="Population_In_nonprivate_Dwellings" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Public_Rental_Dwellings" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Aboriginal_Or_Torres_Strait_Islander" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Not_Completed_Year_12" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Unemployed_Persons" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Household_Income_Less_Than_650" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Individual_Income_Less_Than_400" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Household_Without_Motor_Vehicle" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Household_With_Internet" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="One_Parent_Headed_Families" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Persons_aged_75_Above_Living_Alone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Need_Assistance_With_Core_Activities" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Born_Overseas" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Non_Engisdh_Speaker_At_Home" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Poor_English_Proficiency" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Main_Cultural_group_1_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Main_cultural_group_1_Percentage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Main_cultural_group_2_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Main_cultural_group_2_Percentage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Main_cultural_group_3_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Main_cultural_group_3_Percentage" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="regionalDatabaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Victorias" EntityType="Self.Victoria" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="regionalDatabaseModelStoreContainer" CdmEntityContainer="regionalDatabaseEntities">
+          <EntitySetMapping Name="Victorias">
+            <EntityTypeMapping TypeName="regionalDatabaseModel.Victoria">
+              <MappingFragment StoreEntitySet="Victoria">
+                <ScalarProperty Name="COMM_CODE" ColumnName="COMM_CODE" />
+                <ScalarProperty Name="Community_Name" ColumnName="Community_Name" />
+                <ScalarProperty Name="Community_Type" ColumnName="Community_Type" />
+                <ScalarProperty Name="DHS_Region" ColumnName="DHS_Region" />
+                <ScalarProperty Name="Map_Reference" ColumnName="Map_Reference" />
+                <ScalarProperty Name="Area_km_sq" ColumnName="Area_km_sq" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Road_distance_to_GPO_km" ColumnName="Road_distance_to_GPO_km" />
+                <ScalarProperty Name="Local_Government_Area" ColumnName="Local_Government_Area" />
+                <ScalarProperty Name="Population_density" ColumnName="Population_density" />
+                <ScalarProperty Name="Primary_Care_Partnership" ColumnName="Primary_Care_Partnership" />
+                <ScalarProperty Name="Number_of_localities" ColumnName="Number_of_localities" />
+                <ScalarProperty Name="ABS_Remoteness_Area" ColumnName="ABS_Remoteness_Area" />
+                <ScalarProperty Name="Population_Difference" ColumnName="Population_Difference" />
+                <ScalarProperty Name="Funded_Activity_Types" ColumnName="Funded_Activity_Types" />
+                <ScalarProperty Name="Funded_Services" ColumnName="Funded_Services" />
+                <ScalarProperty Name="HACC_Services" ColumnName="HACC_Services" />
+                <ScalarProperty Name="Child_Protection_Services" ColumnName="Child_Protection_Services" />
+                <ScalarProperty Name="Community_Health_Services" ColumnName="Community_Health_Services" />
+                <ScalarProperty Name="Homelessness" ColumnName="Homelessness" />
+                <ScalarProperty Name="Disability_Services" ColumnName="Disability_Services" />
+                <ScalarProperty Name="Mental_Health_Services" ColumnName="Mental_Health_Services" />
+                <ScalarProperty Name="Human_Health_Services_Sites" ColumnName="Human_Health_Services_Sites" />
+                <ScalarProperty Name="Human_Health_Services_Types" ColumnName="Human_Health_Services_Types" />
+                <ScalarProperty Name="Dental_Sites" ColumnName="Dental_Sites" />
+                <ScalarProperty Name="General_Practice_Sites" ColumnName="General_Practice_Sites" />
+                <ScalarProperty Name="Pharmacy_Sites" ColumnName="Pharmacy_Sites" />
+                <ScalarProperty Name="Allied_Health_Sites" ColumnName="Allied_Health_Sites" />
+                <ScalarProperty Name="Complementary_Health_Sites" ColumnName="Complementary_Health_Sites" />
+                <ScalarProperty Name="Child_Care_Sites" ColumnName="Child_Care_Sites" />
+                <ScalarProperty Name="Residential_Aged_Care_Facilities" ColumnName="Residential_Aged_Care_Facilities" />
+                <ScalarProperty Name="Licensed_Aged_Care_Places" ColumnName="Licensed_Aged_Care_Places" />
+                <ScalarProperty Name="Primary_Schools" ColumnName="Primary_Schools" />
+                <ScalarProperty Name="Secondary_School" ColumnName="Secondary_School" />
+                <ScalarProperty Name="P12_schools" ColumnName="P12_schools" />
+                <ScalarProperty Name="Other_Schools" ColumnName="Other_Schools" />
+                <ScalarProperty Name="Nearest_Health_Service" ColumnName="Nearest_Health_Service" />
+                <ScalarProperty Name="Distance_to_Nearest_Health_Service" ColumnName="Distance_to_Nearest_Health_Service" />
+                <ScalarProperty Name="Residential" ColumnName="Residential" />
+                <ScalarProperty Name="Business" ColumnName="Business" />
+                <ScalarProperty Name="Industrial" ColumnName="Industrial" />
+                <ScalarProperty Name="Rural" ColumnName="Rural" />
+                <ScalarProperty Name="Other" ColumnName="Other" />
+                <ScalarProperty Name="Number_Of_Households" ColumnName="Number_Of_Households" />
+                <ScalarProperty Name="Persons_Per_Household" ColumnName="Persons_Per_Household" />
+                <ScalarProperty Name="Population_In_nonprivate_Dwellings" ColumnName="Population_In_nonprivate_Dwellings" />
+                <ScalarProperty Name="Public_Rental_Dwellings" ColumnName="Public_Rental_Dwellings" />
+                <ScalarProperty Name="Aboriginal_Or_Torres_Strait_Islander" ColumnName="Aboriginal_Or_Torres_Strait_Islander" />
+                <ScalarProperty Name="Not_Completed_Year_12" ColumnName="Not_Completed_Year_12" />
+                <ScalarProperty Name="Unemployed_Persons" ColumnName="Unemployed_Persons" />
+                <ScalarProperty Name="Household_Income_Less_Than_650" ColumnName="Household_Income_Less_Than_650" />
+                <ScalarProperty Name="Individual_Income_Less_Than_400" ColumnName="Individual_Income_Less_Than_400" />
+                <ScalarProperty Name="Household_Without_Motor_Vehicle" ColumnName="Household_Without_Motor_Vehicle" />
+                <ScalarProperty Name="Household_With_Internet" ColumnName="Household_With_Internet" />
+                <ScalarProperty Name="One_Parent_Headed_Families" ColumnName="One_Parent_Headed_Families" />
+                <ScalarProperty Name="Persons_aged_75_Above_Living_Alone" ColumnName="Persons_aged_75_Above_Living_Alone" />
+                <ScalarProperty Name="Need_Assistance_With_Core_Activities" ColumnName="Need_Assistance_With_Core_Activities" />
+                <ScalarProperty Name="Born_Overseas" ColumnName="Born_Overseas" />
+                <ScalarProperty Name="Non_Engisdh_Speaker_At_Home" ColumnName="Non_Engisdh_Speaker_At_Home" />
+                <ScalarProperty Name="Poor_English_Proficiency" ColumnName="Poor_English_Proficiency" />
+                <ScalarProperty Name="Main_Cultural_group_1_Name" ColumnName="Main_Cultural_group_1_Name" />
+                <ScalarProperty Name="Main_cultural_group_1_Percentage" ColumnName="Main_cultural_group_1_Percentage" />
+                <ScalarProperty Name="Main_cultural_group_2_Name" ColumnName="Main_cultural_group_2_Name" />
+                <ScalarProperty Name="Main_cultural_group_2_Percentage" ColumnName="Main_cultural_group_2_Percentage" />
+                <ScalarProperty Name="Main_cultural_group_3_Name" ColumnName="Main_cultural_group_3_Name" />
+                <ScalarProperty Name="Main_cultural_group_3_Percentage" ColumnName="Main_cultural_group_3_Percentage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

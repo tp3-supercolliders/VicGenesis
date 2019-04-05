@@ -12,7 +12,7 @@ namespace VicGenesis.Controllers
 {
     public class AreasController : Controller
     {
-        private Model1 db = new Model1();
+        private regionalDatabaseEntities db = new regionalDatabaseEntities();
 
         // GET: Areas
         public ActionResult Index()

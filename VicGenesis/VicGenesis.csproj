@@ -165,8 +165,25 @@
     <Compile Include="Models\Announcement.cs" />
     <Compile Include="Models\Area.cs" />
     <Compile Include="Models\Event.cs" />
-    <Compile Include="Models\Model1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="regionalDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>regionalDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="regionalDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>regionalDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="regionalDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>regionalDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Victoria.cs">
+      <DependentUpon>regionalDatabase.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="assets\css\ajax-loader.gif" />
@@ -219,6 +236,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="regionalDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>regionalDatabase.edmx</DependentUpon>
+      <LastGenOutput>regionalDatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="regionalDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>regionalDatabase.edmx</DependentUpon>
+      <LastGenOutput>regionalDatabase.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -244,6 +271,13 @@
     <Content Include="assets\fonts\Linearicons-Free.woff" />
     <Content Include="assets\fonts\Linearicons-Free.woff2" />
     <None Include="Properties\PublishProfiles\VicGenesis - Web Deploy.pubxml" />
+    <EntityDeploy Include="regionalDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>regionalDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="regionalDatabase.edmx.diagram">
+      <DependentUpon>regionalDatabase.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -301,6 +335,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
