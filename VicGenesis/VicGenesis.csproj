@@ -169,10 +169,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\Database1.mdf" />
-    <Content Include="App_Data\Database1_log.ldf">
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="assets\css\ajax-loader.gif" />
     <Content Include="assets\css\animate.css" />
     <Content Include="assets\css\bootsnav.css" />
@@ -247,6 +243,7 @@
     <Content Include="assets\fonts\Linearicons-Free.ttf" />
     <Content Include="assets\fonts\Linearicons-Free.woff" />
     <Content Include="assets\fonts\Linearicons-Free.woff2" />
+    <None Include="Properties\PublishProfiles\VicGenesis - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -289,7 +286,9 @@
     <Content Include="Views\Events\Edit.cshtml" />
     <Content Include="Views\Events\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
