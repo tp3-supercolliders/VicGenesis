@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿@model VicGenesis.Models.Victoria
+
+
+@{
+    /**/
+
+    ViewBag.Title = "SelectGroup";
+    Layout = null;
+}
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -6,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 
 
     <title></title>
@@ -69,19 +77,12 @@
             }
     </style>
 
-
 </head>
 <body>
 
     <div>
-        <img src="~/assets/images/explore/1509064541901.jpg" height="500" width="1600" />
+        <img src="~/assets/images/explore/water-4081289_1920_meitu_3.jpg" height="500" width="1600" />
     </div>
-
-    @*<style type="text/css">
-            body {
-                background-image: url(/assets/images/explore/river-3962038_19201111.jpg);
-            }
-        </style>*@
 
     <nav class="navbar navbar-fixed-top my-navbar" role="navigation" style="font-size:24px">
         <div class="container">
@@ -98,8 +99,39 @@
 
     </nav>
     <script>$(window).scroll(function () { if ($(".navbar").offset().top > 50) { $(".navbar-fixed-top").addClass("top-nav"); } else { $(".navbar-fixed-top").removeClass("top-nav"); } })</script>
+
+
+
+    <h2>SelectGroup</h2>
+
+    @using (Html.BeginForm())
+    {
+        <div class="form-horizontal">
+            <h4>Search the areas with the culture group you want!</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <h4>     &nbsp; &nbsp;&nbsp;Input the culture group below</h4>
+                <h6> &nbsp;    &nbsp; &nbsp;&nbsp;For instance:GREEK, ITALIAN......</h6>
+
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Style, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Style, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Search" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+
+
+    
+
     <div class="container body-content">
-        @RenderBody()
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - Produced by SuperColliders</p>
@@ -108,6 +140,5 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
