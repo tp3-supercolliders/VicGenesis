@@ -1,24 +1,16 @@
-﻿@model VicGenesis.Models.Victoria
+﻿@model VicGenesis.Victoria
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details of</h2>
+<h2>Details</h2>
 
 <div>
-    <h1>@Html.DisplayFor(model => model.Community_Name)</h1>
+    <h4>Victoria</h4>
     <hr />
-    <dl class="pre-scrollable  text-justify">
-        <dt>
-            @Html.DisplayNameFor(model => model.COMM_CODE)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.COMM_CODE)
-        </dd>
-
+    <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Community_Name)
         </dt>
@@ -538,10 +530,10 @@
         <dd>
             @Html.DisplayFor(model => model.Main_cultural_group_3_Percentage)
         </dd>
-        
+
     </dl>
 </div>
 <p>
-    @*@Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |*@
+    @Html.ActionLink("Edit", "Edit", new { id = Model.COMM_CODE }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

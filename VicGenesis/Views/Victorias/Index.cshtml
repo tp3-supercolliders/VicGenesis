@@ -1,4 +1,4 @@
-﻿@model IEnumerable<VicGenesis.Models.Victoria>
+﻿@model IEnumerable<VicGenesis.Victoria>
 
 @{
     ViewBag.Title = "Index";
@@ -137,9 +137,7 @@
 
 
                     <td>
-                        @Html.ActionLink("Show More", "Details", new { id = item.ID })
-                        @*@Html.ActionLink("Details", "Edit", new { id = item.ID }) |
-                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
+                        @Html.ActionLink("Show More", "Details", new { id = item.COMM_CODE })
                     </td>
                 </tr>
             }
@@ -148,7 +146,7 @@
     </div>
 
     <button type="button" class="btn btn-default  btn-sm">
-       
+
         @Html.ActionLink("Back to Homepage", "Index", "Home")
     </button>
     <div class="container body-content">
@@ -157,7 +155,7 @@
             <p>&copy; @DateTime.Now.Year - Produced by SuperColliders</p>
         </footer>
     </div>
-   
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

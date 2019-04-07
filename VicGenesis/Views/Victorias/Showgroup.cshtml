@@ -1,7 +1,7 @@
-﻿@model IEnumerable<VicGenesis.Models.Victoria>
+﻿@model IEnumerable<VicGenesis.Victoria>
 
 @{
-    ViewBag.Title = "Showgroup";
+    ViewBag.Title = "ShowGroup";
     Layout = null;
 }
 <!DOCTYPE html>
@@ -135,9 +135,7 @@
 
 
                         <td>
-                            @Html.ActionLink("Show More", "Details", new { id = item.ID })
-                            @*@Html.ActionLink("Details", "Edit", new { id = item.ID }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
+                            @Html.ActionLink("Show More", "Details", new { id = item.COMM_CODE })
                         </td>
                     </tr>
                 }

@@ -1,4 +1,4 @@
-﻿@model VicGenesis.Models.Victoria
+﻿@model VicGenesis.Victoria
 
 
 @{
@@ -22,6 +22,16 @@
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.js-culture-dropdown').select2({
+                theme: "classic"
+            });
+        });
+    </script>
+
     <style type="text/css">
         html, body {
             width: 100%;
@@ -106,30 +116,35 @@
 
     @using (Html.BeginForm())
     {
-        <div class="form-horizontal">
-            <h4>Search the areas with the culture group you want!</h4>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                <h4>     &nbsp; &nbsp;&nbsp;Input the culture group below</h4>
-                <h6> &nbsp;    &nbsp; &nbsp;&nbsp;For instance:GREEK, ITALIAN......</h6>
+    <div class="form-horizontal">
+        <h4>Search the areas with the culture group you want!</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <h4>     &nbsp; &nbsp;&nbsp;Input the culture group below</h4>
+            <h6> &nbsp;    &nbsp; &nbsp;&nbsp;For instance:GREEK, ITALIAN......</h6>
+        </div>
 
-                <div class="col-md-10">
-                    @Html.EditorFor(model => model.Style, new { htmlAttributes = new { @class = "form-control" } })
-                    @Html.ValidationMessageFor(model => model.Style, "", new { @class = "text-danger" })
-                </div>
-            </div>
+        <select class="js-culture-dropdown" name="culture">
+            <option value="AFRO-ARABIC MUSLIM">Afro-Arabic Muslim</option>
+            <option value="ANGLO SAXON AND CELTIC">Anglo Saxon and Celtic</option>
+            <option value="BALKAN">Balkan</option>
+            <option value="CENTRAL EUROPEAN">Central European</option>
+            <option value="DUTCH">Dutch</option>
+            <option value="EAST ASIAN">East Asian</option>
+            <option value="FRANCO-BELGIAN">Franco-Belgian</option>
+            <option value="GERMAN">German</option>
+            <option value="GREEK">Greek</option>
+        </select>
 
-            <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Search" class="btn btn-default" />
-                </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Search" class="btn btn-default" />
             </div>
         </div>
+    </div>
     }
 
-
-    
 
     <div class="container body-content">
         <hr />
