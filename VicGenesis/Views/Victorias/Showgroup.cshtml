@@ -98,46 +98,50 @@
     <script>$(window).scroll(function () { if ($(".navbar").offset().top > 50) { $(".navbar-fixed-top").addClass("top-nav"); } else { $(".navbar-fixed-top").removeClass("top-nav"); } })</script>
 
 
-    <h2>Here are the areas with @ViewBag.style as it's culture group</h2>
+    <h2>Here are the areas with @ViewBag.Culture as it's culture group</h2>
 
     <div style="overflow:scroll; max-height:500px">
         <table class="table">
             <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.COMM_CODE)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Community_Name)
-                </th>
-
-                <th>
-                    @Html.DisplayNameFor(model => model.DHS_Region)
-                </th>
-
-                <th></th>
+                <th>Community Name</th>
+                <th>Local Government Area</th>
+                <th>Location</th>
+                <th>Area (km sq)</th>
+                <th>Population Density</th>
             </tr>
 
             @foreach (var item in Model)
             {
-                if (item.Main_cultural_group_2_Name.Equals(ViewBag.style))
+                if (item.Community_Type == "Town")
                 {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.COMM_CODE)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Community_Name)
-                        </td>
+                    if (item.Main_cultural_group_2_Name.Equals(ViewBag.Culture))
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Community_Name)
+                            </td>
 
-                        <td>
-                            @Html.DisplayFor(modelItem => item.DHS_Region)
-                        </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Local_Government_Area)
+                            </td>
 
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Location)
+                            </td>
 
-                        <td>
-                            @Html.ActionLink("Show More", "Details", new { id = item.COMM_CODE })
-                        </td>
-                    </tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Area_km_sq)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Population_density)
+                            </td>
+
+                            <td>
+                                @Html.ActionLink("Show More", "Details", new { id = item.COMM_CODE })
+                            </td>
+                        </tr>
+                    }
                 }
             }
 

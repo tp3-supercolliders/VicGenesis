@@ -22,15 +22,6 @@
     <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.js-culture-dropdown').select2({
-                theme: "classic"
-            });
-        });
-    </script>
 
     <style type="text/css">
         html, body {
@@ -125,23 +116,22 @@
             <h6> &nbsp;    &nbsp; &nbsp;&nbsp;For instance:GREEK, ITALIAN......</h6>
         </div>
 
-        <select class="js-culture-dropdown" name="culture">
-            <option value="AFRO-ARABIC MUSLIM">Afro-Arabic Muslim</option>
-            <option value="ANGLO SAXON AND CELTIC">Anglo Saxon and Celtic</option>
-            <option value="BALKAN">Balkan</option>
-            <option value="CENTRAL EUROPEAN">Central European</option>
-            <option value="DUTCH">Dutch</option>
-            <option value="EAST ASIAN">East Asian</option>
-            <option value="FRANCO-BELGIAN">Franco-Belgian</option>
-            <option value="GERMAN">German</option>
-            <option value="GREEK">Greek</option>
-        </select>
+        <form>
+            <select id="dropDownList">
+                <option value="AFRO-ARABIC MUSLIM">Afro-Arabic Muslim</option>
+                <option value="ANGLO SAXON AND CELTIC">Anglo Saxon and Celtic</option>
+                <option value="BALKAN">Balkan</option>
+                <option value="CENTRAL EUROPEAN">Central European</option>
+                <option value="DUTCH">Dutch</option>
+                <option value="EAST ASIAN">East Asian</option>
+                <option value="FRANCO-BELGIAN">Franco-Belgian</option>
+                <option value="GERMAN">German</option>
+                <option value="GREEK">Greek</option>
+            </select>
+        </form>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Search" class="btn btn-default" />
-            </div>
-        </div>
+        <input type="submit" onclick="myFunction()" value="Submit" class="btn btn-default" />
+
     </div>
     }
 
@@ -155,5 +145,11 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    <script>
+        function myFunction() {
+            var culture = document.getElementById("dropDownList").value;
+        }
+    </script>
+
 </body>
 </html>

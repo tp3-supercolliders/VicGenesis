@@ -129,6 +129,7 @@ namespace VicGenesis.Controllers
 
         public ActionResult ShowGroup()
         {
+            ViewBag.Culture = "Test";
             return View(db.Victorias.ToList());
         }
 
