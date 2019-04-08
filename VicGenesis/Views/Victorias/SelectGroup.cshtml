@@ -102,13 +102,10 @@
     <script>$(window).scroll(function () { if ($(".navbar").offset().top > 50) { $(".navbar-fixed-top").addClass("top-nav"); } else { $(".navbar-fixed-top").removeClass("top-nav"); } })</script>
 
 
-
-    <h2>SelectGroup</h2>
-
     @using (Html.BeginForm())
     {
-    <div class="form-horizontal">
-        <h4>Search the areas with the culture group you want!</h4>
+    <div class="form-horizontal" align ="center">
+        <h3>Search the areas with the culture group you want!</h3>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">

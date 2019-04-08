@@ -11,14 +11,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
 
 
     <title></title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdn.static.runoob.com/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.static.runoob.com/libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-html5-1.5.6/cr-1.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css" />
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
@@ -103,55 +104,59 @@
     </nav>
     <script>$(window).scroll(function () { if ($(".navbar").offset().top > 50) { $(".navbar-fixed-top").addClass("top-nav"); } else { $(".navbar-fixed-top").removeClass("top-nav"); } })</script>
 
+    <div align="center">
+        <h2>All the regional areas are shown below</h2>
+        <h4>Which one would you like to see more?</h4>
 
-    <h2>All the regional areas are shown below</h2>
-    <h4>Which one would you like to see more?</h4>
-
-    <table id="vicTable" class="table table-hover table-dark">
-        <thead>
-            <tr>
-                <th>Community Name</th>
-                <th>Local Government Area</th>
-                <th>Location</th>
-                <th>Area (km sq)</th>
-                <th>Population Density</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            @foreach (var item in Model)
-            {
-                if (item.Community_Type == "Town")
-                {
+        <div style="overflow:scroll; max-height:500px;">
+            <table id="vicTable" class="table table-hover table-striped">
+                <thead>
                     <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Community_Name)
-                        </td>
-
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Local_Government_Area)
-                        </td>
-
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Location)
-                        </td>
-
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Area_km_sq)
-                        </td>
-
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Population_density)
-                        </td>
-
-                        <td>
-                            @Html.ActionLink("Show More", "Details", new { id = item.COMM_CODE })
-                        </td>
+                        <th>Community Name</th>
+                        <th>Local Government Area</th>
+                        <th>Location</th>
+                        <th>Area (km sq)</th>
+                        <th>Population Density</th>
                     </tr>
-                }
-            }
-        </tbody>
-    </table>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        if (item.Community_Type == "Town")
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Community_Name)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Local_Government_Area)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Location)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Area_km_sq)
+                                </td>
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Population_density)
+                                </td>
+
+                                <td>
+                                    @Html.ActionLink("Show More", "Details", new { id = item.COMM_CODE })
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
 
     <button type="button" class="btn btn-default  btn-sm">
 
@@ -164,14 +169,15 @@
         </footer>
     </div>
 
-
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
     <script>
         $(document).ready(function () {
-            $('vicTable').DataTable();
+            $('#vicTable').DataTable({
+                "sDom": '<"nav"lf>t<"nav"i>',
+                "language": {
+                    "search": "Search (using any keyword) :"
+                }
+            });
         });
     </script>
-
 </body>
 </html>
