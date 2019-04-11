@@ -109,22 +109,14 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            <h4>     &nbsp; &nbsp;&nbsp;Select the culture group below</h4>
+            <h4>      &nbsp;Select the culture group below</h4>
         </div>
+       
+ 
+        <p>
+        @Html.DropDownList("Culture",null, null,new { @class ="form-control"})
+            </p>
 
-        <form>
-            <select id="dropDownList">
-                <option value="AFRO-ARABIC MUSLIM">Afro-Arabic Muslim</option>
-                <option value="ANGLO SAXON AND CELTIC">Anglo Saxon and Celtic</option>
-                <option value="BALKAN">Balkan</option>
-                <option value="CENTRAL EUROPEAN">Central European</option>
-                <option value="DUTCH">Dutch</option>
-                <option value="EAST ASIAN">East Asian</option>
-                <option value="FRANCO-BELGIAN">Franco-Belgian</option>
-                <option value="GERMAN">German</option>
-                <option value="GREEK">Greek</option>
-            </select>
-        </form>
 
         <input type="submit" onclick="myFunction()" value="Submit" class="btn btn-default" />
 

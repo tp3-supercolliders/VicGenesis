@@ -13,6 +13,7 @@ namespace VicGenesis.Controllers
     public class VictoriasController : Controller
     {
         private regionalDatabaseEntities db = new regionalDatabaseEntities();
+        public static string Style { get; set; }
 
         // GET: Victorias
         public ActionResult Index()
@@ -118,21 +119,43 @@ namespace VicGenesis.Controllers
         [HttpGet]
         public ActionResult SelectGroup()
         {
+            List<SelectListItem> selection = new List<SelectListItem>();
+
+            //selection.Add("AFRO-ARABIC MUSLIM");
+            //selection.Add("BALKAN");
+            //selection.Add("CENTRAL EUROPEAN");
+            //selection.Add("DUTCH");
+            //selection.Add("EAST ASIAN");
+            //selection.Add("FRANCO-BELGIAN");
+            //selection.Add("GERMAN");
+            //selection.Add("GREEK");
+            
+            selection.Add(new SelectListItem() { Text = "BALKAN", Value = "BALKAN", Selected = false });
+            selection.Add(new SelectListItem() { Text = "AFRO-ARABIC MUSLIM", Value = "AFRO-ARABIC MUSLIM", Selected = true });
+            selection.Add(new SelectListItem() { Text = "CENTRAL EUROPEAN", Value = "CENTRAL EUROPEAN", Selected = true });
+            selection.Add(new SelectListItem() { Text = "DUTCH", Value = "DUTCH", Selected = true });
+            selection.Add(new SelectListItem() { Text = "EAST ASIAN", Value = "EAST ASIAN", Selected = true });
+            selection.Add(new SelectListItem() { Text = "GERMAN", Value = "GERMAN", Selected = true });
+            selection.Add(new SelectListItem() { Text = "ITALIAN", Value = "ITALIAN", Selected = true });
+            selection.Add(new SelectListItem() { Text = "GREEK", Value = "GREEK", Selected = true });
+
+            ViewBag.Culture = selection;
             return View();
         }
 
         [HttpPost]
-        public ActionResult SelectGroup(Victoria model)
+        public ActionResult SelectGroup(FormCollection form)
         {
+            Style = form["Culture"];
             return RedirectToAction("ShowGroup");
         }
 
         public ActionResult ShowGroup()
         {
-            ViewBag.Culture = "Test";
+            ViewBag.Culture = Style;
             return View(db.Victorias.ToList());
         }
-
+        
         protected override void Dispose(bool disposing)
         {
             if (disposing)
