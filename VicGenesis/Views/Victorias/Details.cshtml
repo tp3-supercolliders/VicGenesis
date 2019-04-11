@@ -5,12 +5,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+
 
 <div>
-    <h4>Victoria</h4>
+    <h1>Here are the details of</h1>
+    <h2>@Html.DisplayFor(model => model.Community_Name)</h2>
     <hr />
-    <dl class="dl-horizontal">
+    <dl class="pre-scrollable  text-justify">
         <dt>
             @Html.DisplayNameFor(model => model.Community_Name)
         </dt>
