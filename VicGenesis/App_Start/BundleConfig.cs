@@ -29,6 +29,9 @@ namespace VicGenesis
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
+            bundles.Add(new ScriptBundle("~/bundles/DataTables").Include(
+                "~/Scripts/DataTables/dataTables.min.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/site").Include(
                         "~/Scripts/site.js"));
         }
