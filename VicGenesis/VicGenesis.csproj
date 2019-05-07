@@ -206,6 +206,8 @@
     <Content Include="assets\images\blog\b2.jpg" />
     <Content Include="assets\images\blog\b3.jpg" />
     <Content Include="assets\images\counter\counter-banner.jpg" />
+    <Content Include="assets\images\explore\2222.jpg" />
+    <Content Include="assets\images\explore\3333.png" />
     <Content Include="assets\images\explore\e1.jpg" />
     <Content Include="assets\images\explore\e2.jpg" />
     <Content Include="assets\images\explore\e3.jpg" />

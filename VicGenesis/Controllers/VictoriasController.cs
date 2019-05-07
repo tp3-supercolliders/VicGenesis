@@ -129,15 +129,15 @@ namespace VicGenesis.Controllers
             //selection.Add("FRANCO-BELGIAN");
             //selection.Add("GERMAN");
             //selection.Add("GREEK");
-            
+            selection.Add(new SelectListItem() { Text = "---Please Select---", Value = "Test", Selected = true });
             selection.Add(new SelectListItem() { Text = "BALKAN", Value = "BALKAN", Selected = false });
-            selection.Add(new SelectListItem() { Text = "AFRO-ARABIC MUSLIM", Value = "AFRO-ARABIC MUSLIM", Selected = true });
-            selection.Add(new SelectListItem() { Text = "CENTRAL EUROPEAN", Value = "CENTRAL EUROPEAN", Selected = true });
-            selection.Add(new SelectListItem() { Text = "DUTCH", Value = "DUTCH", Selected = true });
-            selection.Add(new SelectListItem() { Text = "EAST ASIAN", Value = "EAST ASIAN", Selected = true });
-            selection.Add(new SelectListItem() { Text = "GERMAN", Value = "GERMAN", Selected = true });
-            selection.Add(new SelectListItem() { Text = "ITALIAN", Value = "ITALIAN", Selected = true });
-            selection.Add(new SelectListItem() { Text = "GREEK", Value = "GREEK", Selected = true });
+            selection.Add(new SelectListItem() { Text = "AFRO-ARABIC MUSLIM", Value = "AFRO-ARABIC MUSLIM", Selected = false });
+            selection.Add(new SelectListItem() { Text = "CENTRAL EUROPEAN", Value = "CENTRAL EUROPEAN", Selected = false });
+            selection.Add(new SelectListItem() { Text = "DUTCH", Value = "DUTCH", Selected = false });
+            selection.Add(new SelectListItem() { Text = "EAST ASIAN", Value = "EAST ASIAN", Selected = false });
+            selection.Add(new SelectListItem() { Text = "GERMAN", Value = "GERMAN", Selected = false });
+            selection.Add(new SelectListItem() { Text = "ITALIAN", Value = "ITALIAN", Selected = false });
+            selection.Add(new SelectListItem() { Text = "GREEK", Value = "GREEK", Selected = false });
 
             ViewBag.Culture = selection;
             return View();

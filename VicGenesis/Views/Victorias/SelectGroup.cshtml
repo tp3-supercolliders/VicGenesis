@@ -87,7 +87,7 @@
 <body>
 
     <div>
-        <img src="~/assets/images/explore/e5.jpg" height="500" width="1600" />
+        <img src="~/assets/images/explore/2222.jpg" height="500" width="1600" />
     </div>
 
     <script nonce="rAnd0m123">$(window).scroll(function () { if ($(".navbar").offset().top > 50) { $(".navbar-fixed-top").addClass("top-nav"); } else { $(".navbar-fixed-top").removeClass("top-nav"); } })</script>
@@ -95,26 +95,33 @@
 
     @using (Html.BeginForm())
     {
-        <div class="form-horizontal" align="center">
-            <h3>Search the areas with the culture group you want!</h3>
-            <hr />
-            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">
-                <h4>      &nbsp;Select the culture group below</h4>
-            </div>
+    <div class="form-horizontal" align="center">
+        <h3>Search the areas with the culture group you want!</h3>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div align="left">
+            <a href="https://vicgenesis.me/">
+
+                <button type="button" class="btn btn-warning"> Back to Homepage</button>
 
 
-            <p>
-                @Html.DropDownList("Culture", null, null, new { @class = "form-control" })
-            </p>
-
-
-            <input type="submit" onclick="myFunction()" value="Submit" class="btn btn-default" />
-
+            </a>
         </div>
+        <div class="form-group">
+            <h4>      &nbsp;Select the culture group below</h4>
+        </div>
+
+
+        <p>
+            @Html.DropDownList("Culture", null, null, new { @class = "form-control" })
+        </p>
+
+
+        <input type="submit" onclick="myFunction()" value="Submit" class="btn btn-default" />
+
+    </div>
     }
 
-    <a href="https://vicgenesis.me/" class="button">Back to Homepage</a>
 
     <div class="container body-content">
         <hr />
