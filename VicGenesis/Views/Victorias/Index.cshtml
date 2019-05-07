@@ -19,11 +19,11 @@
 
     <title></title>
     <meta charset="utf-8" />
-    <script src="~/Scripts/jquery-3.3.1.js"></script>
-    <script src="~/Scripts/bootstrap.js"></script>
+    <script nonce="rAnd0m123" src="~/Scripts/jquery-3.3.1.js"></script>
+    <script nonce="rAnd0m123" src="~/Scripts/bootstrap.js"></script>
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
 
-    <script type="text/javascript" src="~/Scripts/DataTables/datatables.min.js"></script>
+    <script nonce="rAnd0m123" type="text/javascript" src="~/Scripts/DataTables/datatables.min.js"></script>
 
     <style type="text/css">
         html, body {
@@ -70,14 +70,20 @@
             background: #000;
         }
 
-        button.navbar-toggle {
-            background-color: #00FFFF;
+
+        .button {
+            background-color: #1c87c9;
+            border: none;
+            color: white;
+            padding: 20px 34px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin: 4px 2px;
+            cursor: pointer;
         }
 
-
-            button.navbar-toggle > span.icon-bar {
-                background-color: #00FFFF
-            }
     </style>
 
 </head>
@@ -87,20 +93,6 @@
         <img src="~/assets/images/explore/e3.jpg" height="500" width="1600" />
     </div>
 
-    <nav class="navbar navbar-fixed-top my-navbar" role="navigation" style="font-size:24px">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Go back to homepage", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-
-        </div>
-
-    </nav>
     <script>$(window).scroll(function () { if ($(".navbar").offset().top > 50) { $(".navbar-fixed-top").addClass("top-nav"); } else { $(".navbar-fixed-top").removeClass("top-nav"); } })</script>
 
     <div align="center">
@@ -155,12 +147,9 @@
             </table>
         </div>
     </div>
-    
 
-    <button type="button" class="btn btn-default  btn-sm">
+    <a href="https://vicgenesis.me/" class="button">Back to Homepage</a>
 
-        @Html.ActionLink("Back to Homepage", "Index", "Home")
-    </button>
     <div class="container body-content">
         <hr />
         <footer>
@@ -168,7 +157,7 @@
         </footer>
     </div>
 
-    <script>
+    <script nonce="rAnd0m123">
         $(document).ready(function () {
             $('#vicTable').DataTable({
                 "sDom": '<"nav"lf>t<"nav"i>',
