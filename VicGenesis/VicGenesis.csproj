@@ -274,7 +274,6 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
-    <None Include="Properties\PublishProfiles\VicGenesis - Web Deploy.pubxml" />
     <EntityDeploy Include="regionalDatabase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>regionalDatabase.Designer.cs</LastGenOutput>
@@ -625,7 +624,7 @@
     <Content Include="Scripts\esm\popper-utils.js.map" />
     <Content Include="Scripts\DataTables\Buttons-1.5.6\css\common.scss" />
     <Content Include="Scripts\DataTables\Buttons-1.5.6\css\mixins.scss" />
-    <None Include="Properties\PublishProfiles\VicGenesis2 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\VicGenesis3 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
